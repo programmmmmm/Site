@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../css/indexStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            //Меняем цвет
+            $('.btnReadMore').hover(function (event){
+                let id = event.target.id;
+                $('.blockService__'+id).stop().css({
+                    backgroundColor: "#00897b",
+                    boxShadow: '0 0 10px rgba(0,0,0,0.7)',
+                }, 200);
+                $('.phone__'+id).stop().css({
+                    filter: "invert(100%)",
+                }, 200);
+                $('.description__'+id).stop().css({
+                    color: "white",
+                }, 200)
+                $('.Title__'+id).stop().css({
+                    color: "white",
+                }, 200)
+                $('#'+id).stop().css({
+                    border: "2px solid white",
+                    color: 'white',
+                }, 200)
+            //Возврат в исходное положение
+            },function (event){
+                let id = event.target.id;
+                $('.blockService__'+id).stop().css({
+                    backgroundColor: "#ffffff",
+                    boxShadow: 'none',
+                }, 200);
+                $('.phone__'+id).stop().css({
+                    filter: "invert(0%)",
+                }, 200);
+                $('.description__'+id).stop().css({
+                    color: "black",
+                }, 200)
+                $('.Title__'+id).stop().css({
+                    color: "black",
+                }, 200)
+                $('#'+id).stop().css({
+                    border: "2px solid black",
+                    color: 'black',
+                }, 200)
+            });
+        })
+    </script>
+</head>
+<body>
+<header class="header">
+    <div class="img1">
+        <div class="whiteLine">
+            <div class="items">
+                <div class="itemLogo">
+                    Your Logo
+                </div>
+                <nav>
+                    <a href="#" class="item">Home</a>
+                    <a href="#" class="item">About</a>
+                    <a href="#" class="item">Servicing</a>
+                    <a href="#" class="item">Portfolio</a>
+                    <a href="#" class="item">Blog</a>
+                    <a href="#" class="item">Contact us</a>
+                </nav>
+            </div>
+        </div>
+        <div class="headerBlock">
+            <p class="headerPH">Web development project</p>
+            <p class="headerP">Very suitable to support all web development projects</p>
+            <div class="btnHeader">
+                <a href="#" class="btnServices">Our services</a>
+                <a href="#" class="btnNow">Hire is now</a>
+            </div>
+        </div>
+    </div>
+    <div class="img2">
+        <div class="aboutUs">
+            <h1 class="aboutH">About us</h1>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+            </div>
+            <div class="iconAboutUs">
+                <div class="internetBlock">
+                    <img src="../img/internet.png" class="aboutIcon">
+                    <p class="aboutIconH">Awesome lcons</p>
+                    <p class="textAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="internetBlock">
+                    <img src="../img/transfer.png" class="aboutIcon">
+                    <p class="aboutIconH">One Page</p>
+                    <p class="textAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="internetBlock">
+                    <img src="../img/head.png" class="aboutIcon">
+                    <p class="aboutIconH">Filly Responsive</p>
+                    <p class="textAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="img3">
+        <div class="ourServicesHeading">
+            <h1>Our Services</h1>
+            <div class="textOurServicesHeading">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+            </div>
+        </div>
+        <div class="servicesBlock">
+            <div class="blockService__button1">
+                <div class="logoText">
+                    <img class="phone__button1" src="../img/phone.png">
+                    <p class="Title__button1">Research</p>
+                </div>
+                <div class="Description">
+                    <p class="description__button1">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                </div>
+                <div class="btnService">
+                    <a href="#" class="btnReadMore" id="button1">Read More</a>
+                </div>
+            </div>
+            <div class="blockService__button2">
+                <div class="logoText">
+                    <img class="phone__button2" src="../img/phone.png">
+                    <p class="Title__button2">Portfolio</p>
+                </div>
+                <div class="Description">
+                    <p class="description__button2">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                </div>
+                <div class="btnService">
+                    <a href="#" class="btnReadMore" id="button2">Read More</a>
+                </div>
+            </div>
+            <div class="blockService__button3">
+                <div class="logoText">
+                    <img class="phone__button3" src="../img/phone.png">
+                    <p class="Title__button3">Support</p>
+                </div>
+                <div class="Description">
+                    <p class="description__button3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                </div>
+                <div class="btnService">
+                    <a href="#" class="btnReadMore" id="button3">Read More</a>
+                </div>
+            </div>
+            <div class="blockService__button4">
+                <div class="logoText">
+                    <img class="phone__button4" src="../img/phone.png">
+                    <p class="Title__button4">Documentation</p>
+                </div>
+                <div class="Description">
+                    <p class="description__button4">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                </div>
+                <div class="btnService">
+                    <a href="#" class="btnReadMore" id="button4">Read More</a>
+                </div>
+            </div>
+            <div class="blockService__button5">
+                <div class="logoText">
+                    <img class="phone__button5" src="../img/phone.png">
+                    <p class="Title__button5">Development</p>
+                </div>
+                <div class="Description">
+                    <p class="description__button5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                </div>
+                <div class="btnService">
+                    <a href="#" class="btnReadMore" id="button5">Read More</a>
+                </div>
+            </div>
+            <div class="blockService__button6">
+                <div class="logoText">
+                    <img class="phone__button6" src="../img/phone.png">
+                    <p class="Title__button6">Design</p>
+                </div>
+                <div class="Description">
+                    <p class="description__button6">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                </div>
+                <div class="btnService">
+                    <a href="#" class="btnReadMore" id="button6">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="img4">
+        <div class="latestWorks">
+            <div class="latestWorksDescription">
+                <h1>Latest Works</h1>
+                <div class="latestWorksDescriptionP">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                </div>
+                <div class="btnLatestWorks">
+                    <a href="#" class="btnLatestWorks1">all</a>
+                    <a href="#" class="btnLatestWorks2">web design</a>
+                    <a href="#" class="btnLatestWorks3">ul/ux design</a>
+                    <a href="#" class="btnLatestWorks4">mockups</a>
+                </div>
+            </div>
+            <div class="latestWorksProduct">
+                <div id="product1" style='background-image: url("../img/Layer1.png")'>
+                    <div class="productDescription2">
+                        <h2 class="hello">Hand Watch</h2>
+                        <p>ui/ux design</p>
+                    </div>
+                </div>
+                <div id="product2" style='background-image: url("../img/Layer2.png")'>
+                    <div class="productDescription">
+                        <h2 class="hello">Hand Watch</h2>
+                        <p>ui/ux design</p>
+                    </div>
+                </div>
+                <div id="product3" style='background-image: url("../img/Layer3.png")'>
+                    <div class="productDescription">
+                        <h2 class="hello">Hand Watch</h2>
+                        <p>ui/ux design</p>
+                    </div>
+                </div>
+                <div id="product4" style='background-image: url("../img/Layer4.png")'>
+                    <div class="productDescription">
+                        <h2 class="hello">Hand Watch</h2>
+                        <p>ui/ux design</p>
+                    </div>
+                </div>
+                <div id="product5" style='background-image: url("../img/Layer5.png")'>
+                    <div class="productDescription">
+                        <h2 class="hello">Hand Watch</h2>
+                        <p>ui/ux design</p>
+                    </div>
+                </div>
+                <div id="product6" style='background-image: url("../img/Layer6.png")'>
+                    <div class="productDescription">
+                        <h2 class="hello">Hand Watch</h2>
+                        <p>ui/ux design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="viewAllBtnClass">
+                <a href="#" class="viewAllBtn">view all</a>
+            </div>
+        </div>
+    </div>
+</header>
+<footer>
+    <h1>All rights Reserved © 2020</h1>
+</footer>
+</body>
+</html>
